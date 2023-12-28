@@ -1,0 +1,27 @@
+h1{
+    text-align: center; background-color: rgb(255, 0, 0);
+}
+body{
+    background-color: rgb(206, 196, 189);
+}
+
+.cos{
+    width: 100%;
+    height: 500px;
+    
+}
+
+.cos div{
+    width: 400px;
+    float: left;
+    height: 500px;
+    margin-right: 10px;
+    border-radius: 10%;    
+}
+.cos div{
+    
+    width: 300px;
+    float: left;
+    height: 500px;
+}
+
