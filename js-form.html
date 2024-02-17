@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js-produral form-practice</title>
+    <style>
+        body{
+            background-color: cadetblue;
+        }
+    </style>
+</head>
+<body>
+    
+
+    <center>
+        <div id="errorMessages" class="error"></div>
+
+        <form action="#" name="frm" >
+
+            <fieldset style="width: 600px; text-align: center; background-color: rgb(107, 95, 83);" >
+    
+                <legend style="text-align:center; border: 1px solid; background-color: bisque; border-radius: 5px;">
+               <h3> Create a New Account</h3> </legend>
+                
+                <input type="text" name="txtName" placeholder="Enter your name" required> 
+                <input  type="text" name="textID" placeholder="Please Enter your Id:" required><br>
+                <label  for="gender">Gender</label>
+                   <select style="margin-top:5px ;" name="gender" id="gender" required>
+                     <option value="male">Male</option>     
+                     <option value="female">Female</option>     
+                     <option value="other">Other</option>
+                    </select>      
+                <label for="Course">Course</label>
+                   <select name="Course" id="Course" required>
+                     <option value="wdpf">WDPF</option>     
+                     <option value="c#">C#</option>     
+                     <option value="java">JAVA</option>
+                     <option value="dotnet">Dot-net</option>
+                    </select>  <br> <br>   
+                <!-- <input  type="number" name="textNumber" placeholder="Please Enter your number"><br> -->
+                <label for="email">Email:</label> <br>
+                <input style="margin-top: 5px;" id="email"  type="email" name="textEmail" placeholder="Please Enter your email" required> <br>
+
+                <label for="password">password:</label> <br>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required> <br>
+
+                <label for="Confirm_password">Confirm password:</label> <br>
+                <input type="ConfirmPassword" id="ConfirmPassword" name="ConfirmPassword" placeholder=" Confirm_password" required>
+               
+
+                
+
+              
+                        <br><br><br><br>
+                
+     
+                                    
+                <input style="background-color: rgb(114, 248, 114); border-radius: 5px;" type="button" onclick="dyn_window()" value="Submit" />
+                
+                <input style="background-color: rgb(247, 9, 9); border-radius: 5px;" type="button" value="Reset"/>
+    
+            </fieldset>
+        </form>
+    </center>
+
+    <script >
+
+        class User{
+            constructor(txtName,textID,gender,Course,textEmail){
+                this.name=txtName;
+                this.id=textID;
+                this.gender=gender;
+                this.Course=Course;
+                this.email=textEmail;
+                this.password=password;
+                this.ConfirmPassword=ConfirmPassword;
+                this.errors=[];
+            }
+            validateEmail(){
+                const emailRegex= /\s+@\s+.\s/;
+                if(!emailRegex.test(this.email)){
+                    this.errors.push("Invalid email address");
+                }
+            }
+        }
+
+
+
+        function dyn_window(){
+           var name= document.frm.txtName.value;
+           var id= document.frm.textID.value;
+           var gender= document.frm.gender.value;
+           var course= document.frm.Course.value;
+           var txemal= document.frm.textEmail.value;
+          
+
+           //For new window
+           win=open('','','width=300px,height=200px');
+
+           with(win.document){
+                write("<h2>Registration Details : <hr> </h2>");
+                write("Name:"+ name +"<br/>");
+                write("ID:"+id+"<br/>");
+                write("Gender:"+gender+"<br/>");
+                write("Course:"+course+"<br/>");
+                write("Email:"+ txemal +"<br/>");
+            
+
+            
+  
+
+             write("<input type='button' value='close' onclick = self.close();' /> ");
+             write("<input type='button' value ='print' onclick = self.print();' /> ");
+
+           }
+
+        }
+
+
+    </script>
+
+
+
+</body>
+</html>
