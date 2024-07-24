@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(209, 231, 7, 0.97);
+    border-radius: 1px 1px 20px 1px;
+   
+}
+.logo{
+    width: 25%;
+   
+}
+.logo img{
+    width: 200px;
+    margin-left: 50px;
+   
+}
+.search{
+ width: 50%;
+ margin-top: 10px;
+ margin-bottom: 10px;
+ border-radius: 10px;
+}
+
+.drop_container{
+    margin-right: 50px;
+    position: relative;
+    border-radius: 10px;
+    
+}
+.logout_content{
+    position: absolute;
+    display: none;
+    width: 150px;
+    border-radius: 10px;
+    margin-right: 100px;
+    
+   
+}
+.drop_container:hover .logout_content{
+    display: block;
+    background-color: rgb(1, 35, 5);
+    color: aliceblue;
+}
+.logout_content li{
+    box-shadow: 5px 8px 16px 5px rgb(222, 246, 4);
+    position: relative;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 8px;
+    text-align: center;
+    
+}
+.logout_content li:hover{
+    background-color: rgb(250, 242, 6);
+    color: rgb(255, 6, 6);
+}
+.user{
+    margin-top: 10px;
+    padding: 5px;
+    width: 100px;
+    background-color: red;
+    border-radius: 10px;
+    box-shadow: 5px 8px 16px 5px rgb(2, 47, 60);
+    font-weight: bolder;
+}
+.container{
+    display: flex;
+}
+.sidebar{
+    width: 15%;
+    background-color: rgb(0, 0, 0);
+    height: 100vh;
+    color: rgb(255, 255, 255);
+    border-color: brown;
+    font-weight: bolder;
+    padding: 10px;
+    border-radius:  1px 20px 1px 1px;
+    
+}
+.sidebar li{
+    text-decoration: none;
+    text-align: center;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 8px;
+    box-shadow: 5px 8px 16px 5px rgb(222, 246, 4);
+}
+.sidebar li:hover{
+    background-color: rgb(250, 242, 6);
+    color: rgb(255, 6, 6);
+}
+
+ .drop_container_nav{
+    position: relative;
+    box-shadow: 5px 8px 16px 5px rgba(222, 246, 4, 0.694);
+    border-radius: 10px 10px 10px 10px;
+   
+   
+} 
+.nav_drop{
+ 
+    background-color: #75abc8;
+    display: none;
+    position: absolute;
+    border-radius: 10px;
+    width: 150px;
+}
+.nav_drop li{
+    display: block;
+}
+.drop_container_nav:hover .nav_drop{
+    background-color: rgb(8, 96, 164);
+    display: block;
+}
+.mbody{
+    width: 85%;
+}
